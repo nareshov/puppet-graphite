@@ -1,6 +1,5 @@
 require 'puppet'
 require 'yaml'
-require 'pp'
 
 begin
   require 'gmetric'
