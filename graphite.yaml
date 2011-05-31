@@ -1,0 +1,3 @@
+---
+:graphite_server: 'splunk.directi.com'
+:graphite_port: 2003

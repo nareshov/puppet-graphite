@@ -1,50 +1,46 @@
-puppet-ganglia
+puppet-graphite
 ==============
 
 Description
 -----------
 
-A Puppet report processor for sending metrics to a [Ganglia](http://ganglia.sourceforge.net/) server via gmetric.
+A Puppet report processor for sending metrics to a [Graphite](http://graphite.wikidot.com/) server.
 
 Requirements
 ------------
 
-* `gmetric` gem
 * `Puppet`
-* A [Ganglia](http://ganglia.sourceforge.net/) server
+* A [Graphite](http://graphite.wikidot.com/) server
 
 Installation & Usage
 --------------------
 
-1.  Install the `gmetric` gem on your Puppet master
-
-        $ sudo gem install gmetric
-
-2.  Install puppet-ganglia as a module in your Puppet master's module
+1.  Install puppet-graphite as a module in your Puppet master's module
     path.
 
-3.  Update the `ganglia_server` and `ganglia_port` variables in the `ganglia.yaml` file with 
-    your Ganglia server IP and port and copy the file to `/etc/puppet/`. An example file is included.
+2.  Update the `graphite_server` and `graphite_port` variables in the `graphite.yaml` file with 
+    your Graphite server IP and port and copy the file to `/etc/puppet/`. An example file is included.
 
-4.  Enable pluginsync and reports on your master and clients in `puppet.conf`
+3.  Enable pluginsync and reports on your master and clients in `puppet.conf`
 
         [master]
         report = true
-        reports = ganglia
+        reports = graphite
         pluginsync = true
         [agent]
         report = true
         pluginsync = true
 
-5.  Run the Puppet client and sync the report as a plugin
+4.  Run the Puppet client and sync the report as a plugin
 
 Author
 ------
 
-James Turnbull <james@lovedthanlost.net>
+Naresh V. <nareshov@gmail.com>
+Derived from [puppet-ganglia](https://github.com/jamtur01/puppet-ganglia) by James Turnbull <james@lovedthanlost.net>
 
-License
--------
+Original License
+----------------
 
     Author:: James Turnbull (<james@lovedthanlost.net>)
     Copyright:: Copyright (c) 2011 James Turnbull
@@ -61,3 +57,11 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
+License of this derived work
+----------------------------
+
+    Same as above plus:
+    Author:: Naresh V. (<nareshov@gmail.com>)
+    Copyright:: Copyright (c) 2011 Naresh V.
+    License:: Apache License, Version 2.0
