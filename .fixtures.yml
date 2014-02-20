@@ -1,0 +1,4 @@
+fixtures:
+  symlinks:
+    graphite_reporter: "#{source_dir}"
+
